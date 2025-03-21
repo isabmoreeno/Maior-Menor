@@ -1,0 +1,36 @@
+<div class="container mt-5 text-center">
+    <h2 class="text-primary">Comparador de Maior e Menor Valor</h2>
+  
+    <!-- Campos de entrada para os três valores -->
+<div class="d-flex justify-content-center">
+    <div class="mt-3 w-50">
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Digite o primeiro valor"
+        [(ngModel)]="valor1"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Digite o segundo valor"
+        [(ngModel)]="valor2"
+      />
+      <input
+        type="number"
+        class="form-control mb-2"
+        placeholder="Digite o terceiro valor"
+        [(ngModel)]="valor3"
+      />
+    </div>
+</div>
+    <!-- Botão para calcular o maior valor -->
+    <button class="btn btn-primary mt-3" (click)="calcularMaiorMenorValor()">Calcular</button>
+  
+    <!-- Exibindo o maior valor -->
+    <div *ngIf="maiorValor !== null && menorValor !== null" class="mt-3">
+      <h4>O maior valor é: {{ maiorValor }}</h4>
+      <h4>O menor valor é: {{ menorValor }}</h4>
+    </div>
+  </div>
+  
